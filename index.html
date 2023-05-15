@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>melanoma</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>final</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -15156,7 +15156,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Melanoma is the most common form of skin cancer for 25-29 year olds, and the second most common form of skin cancer for 15-19 year olds. Despite these alarming statistics, only about 16% of Americans between the ages of 18-29 years old visited a dermatologist in 2018. Even though melanoma is the deadliest form of skin cancer, the survival rate is 93% when it is detected in early stages.</p>
 <p>Access to dermatologists is also a concern. Factors such as cost, hours of operation, and availability of appointments add to the lack of annual visits. A more accessible way for the general public to determine their risk for melanoma would significantly improve the chances of it being caught in earlier stages and thus increase survival rates.</p>
-<p>With this project, I hope to demonstrate how a machine learning model, specifically a convolutional neural network, can be used in the detection of melanoma. I believe that machine learning models could someday be used not only in melanoma diagnosis, but the diagnosis of other cancers as well. This would provide the general public with an accessible resource in cancer detection.</p>
+<p>In 2018, a <a href="https://www.sciencedirect.com/science/article/pii/S0923753419341055">study</a> was done in which 58 dermatologists with varying backgrounds and expertise were measured on their sensitivity and specificity for melanoma classification. When using dermoscopy only, these dermatologists had an average sensitivity of 86.6% and specificity of 71.3%. In the scope of this study, the sensitivity is how many patients with melanoma were diagnosed with it, and specificity is how many patients that do not have melanoma were accurately given negative results.</p>
+<p>With this project, I hope to demonstrate how a machine learning model, specifically a convolutional neural network, can be used in the detection of melanoma. Specifically, my goal is to develop a model that outperforms a sensitivity of 86.6% and specificity of 71.3%, as this would be an improvement from the dermatologists' diagnoses mentioned previously. I believe that machine learning models could someday be used not only in melanoma diagnosis, but the diagnosis of other cancers as well. This would provide the general public with an accessible resource in cancer detection.</p>
 
 </div>
 </div>
@@ -15197,7 +15198,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
@@ -15283,7 +15284,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">transform</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">((</span><span class="mi">96</span><span class="p">,</span> <span class="mi">96</span><span class="p">)),</span>
@@ -15370,7 +15371,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">batch_size</span> <span class="o">=</span> <span class="mi">16</span>
@@ -15400,7 +15401,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_dataloader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">train_dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -15524,7 +15525,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">CNN</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
@@ -15586,7 +15587,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model_original</span> <span class="o">=</span> <span class="n">CNN</span><span class="p">()</span>
@@ -15606,7 +15607,7 @@ class="
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -15646,7 +15647,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss_function</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">BCELoss</span><span class="p">()</span>
@@ -15677,7 +15678,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">train_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">,</span> <span class="n">train_dataloader</span><span class="p">,</span> <span class="n">val_dataloader</span><span class="p">,</span> <span class="n">optim</span><span class="p">,</span> <span class="n">loss_function</span><span class="p">):</span>
@@ -15761,7 +15762,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_train_loss</span><span class="p">,</span> <span class="n">mean_val_loss</span><span class="p">,</span> <span class="n">mean_train_acc</span><span class="p">,</span> <span class="n">mean_val_acc</span> <span class="o">=</span> <span class="n">train_model</span><span class="p">(</span><span class="n">model_original</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">,</span> <span class="n">train_dataloader</span><span class="p">,</span> <span class="n">val_dataloader</span><span class="p">,</span> <span class="n">optim</span><span class="p">,</span> <span class="n">loss_function</span><span class="p">)</span>
@@ -15819,7 +15820,7 @@ Epoch : 45, Train loss: 6.680821388727054e-05, Train acc: 1.0, Val loss: 1.63815
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mean_train_loss</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Training&#39;</span><span class="p">)</span>
@@ -15868,7 +15869,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mean_train_acc</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Training&#39;</span><span class="p">)</span>
@@ -15963,7 +15964,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">CNN_with_Dropout</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
@@ -17163,7 +17164,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model_30_epochs</span> <span class="o">=</span> <span class="n">CNN_with_Dropout</span><span class="p">()</span>
@@ -17183,7 +17184,7 @@ class="
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -17212,7 +17213,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">batch_size</span> <span class="o">=</span> <span class="mi">16</span>
@@ -17230,7 +17231,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_dataloader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">train_dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -17248,7 +17249,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss_function</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">BCELoss</span><span class="p">()</span>
@@ -17265,7 +17266,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_train_loss</span><span class="p">,</span> <span class="n">mean_val_loss</span><span class="p">,</span> <span class="n">mean_train_acc</span><span class="p">,</span> <span class="n">mean_val_acc</span> <span class="o">=</span> <span class="n">train_model</span><span class="p">(</span><span class="n">model_30_epochs</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">,</span> <span class="n">train_dataloader</span><span class="p">,</span> <span class="n">val_dataloader</span><span class="p">,</span> <span class="n">optim</span><span class="p">,</span> <span class="n">loss_function</span><span class="p">)</span>
@@ -17307,7 +17308,7 @@ Epoch : 25, Train loss: 0.2166203260421753, Train acc: 0.9130484330484331, Val l
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mean_train_loss</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Training&#39;</span><span class="p">)</span>
@@ -17356,7 +17357,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mean_train_acc</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Training&#39;</span><span class="p">)</span>
@@ -17418,7 +17419,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>It is now time to test the models. I am going to be evaluating each model based on accuracy, precision, recall, and F1 score. These metrics will be used to determine the best performing model. In the scope of this project, accuracy is the probability the model correctly diagnoses a patient with or without melanoma, precision is the probability a patient diagnosed with melanoma by the model truly has melanoma, recall is the probability a patient with melanoma is diagnosed by the model, and the F1 score combines the precision and recall scores. A confusion matrix is also being calculated for each model, which provides a visual representation of true positive, true negative, false positive, and false negative classifications for each model.</p>
+<p>It is now time to test the models. I am going to be evaluating each model based on accuracy, precision, sensitivity (recall), specificity, and F1 score. These metrics will be used to determine the best performing model. In the scope of this project, accuracy is the probability the model correctly diagnoses a patient with or without melanoma, precision is the probability a patient diagnosed with melanoma by the model truly has melanoma, sensitivity is the probability a patient with melanoma is diagnosed by the model, specificity is the probability a patient without melanoma will receive a negative diagnosis, and the F1 score combines the precision and recall scores. A confusion matrix is also being calculated for each model, which provides a visual representation of true positive, true negative, false positive, and false negative classifications for each model.</p>
 
 </div>
 </div>
@@ -17428,13 +17429,14 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Original&#39;</span><span class="p">,</span> <span class="s1">&#39;Dropout&#39;</span><span class="p">,</span> <span class="s1">&#39;1e-5 Weight Decay&#39;</span><span class="p">,</span> <span class="s1">&#39;1e-4 Weight Decay&#39;</span><span class="p">,</span> <span class="s1">&#39;1e-3 Weight Decay&#39;</span><span class="p">,</span> <span class="s1">&#39;30 Epochs&#39;</span><span class="p">]</span>
 <span class="n">accuracies</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">precisions</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">recalls</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">specificities</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">f1_scores</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
 
@@ -17460,7 +17462,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">test_dataloader</span><span class="p">):</span>
@@ -17509,7 +17511,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">acc</span><span class="p">,</span> <span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span> <span class="o">=</span> <span class="n">test_model</span><span class="p">(</span><span class="n">model_original</span><span class="p">,</span> <span class="n">test_dataloader</span><span class="p">)</span>
@@ -17548,7 +17550,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">prec</span> <span class="o">=</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
@@ -17587,11 +17589,11 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rec</span> <span class="o">=</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recall: &quot;</span><span class="p">,</span> <span class="n">rec</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sensitivity/Recall: &quot;</span><span class="p">,</span> <span class="n">rec</span><span class="p">)</span>
 <span class="n">recalls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
 </pre></div>
 
@@ -17612,7 +17614,7 @@ class="
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Recall:  0.888
+<pre>Sensitivity/Recall: 0.888
 </pre>
 </div>
 </div>
@@ -17626,7 +17628,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f1</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
@@ -17665,7 +17667,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
@@ -17700,6 +17702,45 @@ class="
 >
 </div>
 
+</div>
+
+</div>
+
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">specificity</span> <span class="o">=</span> <span class="mi">478</span> <span class="o">/</span> <span class="p">(</span><span class="mi">478</span> <span class="o">+</span> <span class="mi">42</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Specifity: &quot;</span><span class="p">,</span> <span class="n">specificity</span><span class="p">)</span>
+<span class="n">specificities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">specificity</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Specifity:  0.9192307692307692
+</pre>
+</div>
 </div>
 
 </div>
@@ -17800,11 +17841,11 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rec</span> <span class="o">=</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recall: &quot;</span><span class="p">,</span> <span class="n">rec</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sensitivity/Recall: &quot;</span><span class="p">,</span> <span class="n">rec</span><span class="p">)</span>
 <span class="n">recalls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
 </pre></div>
 
@@ -17825,7 +17866,7 @@ class="
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Recall:  0.872
+<pre>Sensitivity/Recall: 0.872
 </pre>
 </div>
 </div>
@@ -17913,6 +17954,45 @@ class="
 >
 </div>
 
+</div>
+
+</div>
+
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">specificity</span> <span class="o">=</span> <span class="mi">479</span> <span class="o">/</span> <span class="p">(</span><span class="mi">479</span> <span class="o">+</span> <span class="mi">41</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Specifity: &quot;</span><span class="p">,</span> <span class="n">specificity</span><span class="p">)</span>
+<span class="n">specificities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">specificity</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Specifity:  0.9211538461538461
+</pre>
+</div>
 </div>
 
 </div>
@@ -18013,11 +18093,11 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rec</span> <span class="o">=</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recall: &quot;</span><span class="p">,</span> <span class="n">rec</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sensitivity/Recall: &quot;</span><span class="p">,</span> <span class="n">rec</span><span class="p">)</span>
 <span class="n">recalls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
 </pre></div>
 
@@ -18038,7 +18118,7 @@ class="
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Recall:  0.894
+<pre>Sensitivity/Recall: 0.894
 </pre>
 </div>
 </div>
@@ -18126,6 +18206,45 @@ class="
 >
 </div>
 
+</div>
+
+</div>
+
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">specificity</span> <span class="o">=</span> <span class="mi">480</span> <span class="o">/</span> <span class="p">(</span><span class="mi">480</span> <span class="o">+</span> <span class="mi">40</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Specifity: &quot;</span><span class="p">,</span> <span class="n">specificity</span><span class="p">)</span>
+<span class="n">specificities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">specificity</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Specifity:  0.9230769230769231
+</pre>
+</div>
 </div>
 
 </div>
@@ -18226,11 +18345,11 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rec</span> <span class="o">=</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recall: &quot;</span><span class="p">,</span> <span class="n">rec</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sensitivity/Recall: &quot;</span><span class="p">,</span> <span class="n">rec</span><span class="p">)</span>
 <span class="n">recalls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
 </pre></div>
 
@@ -18251,7 +18370,7 @@ class="
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Recall:  0.86
+<pre>Sensitivity/Recall: 0.86
 </pre>
 </div>
 </div>
@@ -18345,6 +18464,45 @@ class="
 
 </div>
 
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">specificity</span> <span class="o">=</span> <span class="mi">491</span> <span class="o">/</span> <span class="p">(</span><span class="mi">491</span> <span class="o">+</span> <span class="mi">29</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Specifity: &quot;</span><span class="p">,</span> <span class="n">specificity</span><span class="p">)</span>
+<span class="n">specificities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">specificity</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Specifity:  0.9442307692307692
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -18361,7 +18519,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">acc</span><span class="p">,</span> <span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span> <span class="o">=</span> <span class="n">test_model</span><span class="p">(</span><span class="n">model_weight_decay_3</span><span class="p">,</span> <span class="n">test_dataloader</span><span class="p">)</span>
@@ -18439,11 +18597,11 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rec</span> <span class="o">=</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recall: &quot;</span><span class="p">,</span> <span class="n">rec</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sensitivity/Recall: &quot;</span><span class="p">,</span> <span class="n">rec</span><span class="p">)</span>
 <span class="n">recalls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
 </pre></div>
 
@@ -18464,7 +18622,7 @@ class="
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Recall:  0.88
+<pre>Sensitivity/Recall: 0.88
 </pre>
 </div>
 </div>
@@ -18558,6 +18716,45 @@ class="
 
 </div>
 
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">specificity</span> <span class="o">=</span> <span class="mi">474</span> <span class="o">/</span> <span class="p">(</span><span class="mi">474</span> <span class="o">+</span> <span class="mi">46</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Specifity: &quot;</span><span class="p">,</span> <span class="n">specificity</span><span class="p">)</span>
+<span class="n">specificities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">specificity</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Specifity:  0.9115384615384615
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -18574,7 +18771,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">acc</span><span class="p">,</span> <span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span> <span class="o">=</span> <span class="n">test_model</span><span class="p">(</span><span class="n">model_30_epochs</span><span class="p">,</span> <span class="n">test_dataloader</span><span class="p">)</span>
@@ -18613,7 +18810,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">prec</span> <span class="o">=</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
@@ -18652,11 +18849,11 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rec</span> <span class="o">=</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recall: &quot;</span><span class="p">,</span> <span class="n">rec</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sensitivity/Recall: &quot;</span><span class="p">,</span> <span class="n">rec</span><span class="p">)</span>
 <span class="n">recalls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
 </pre></div>
 
@@ -18677,7 +18874,7 @@ class="
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Recall:  0.878
+<pre>Sensitivity/Recall: 0.878
 </pre>
 </div>
 </div>
@@ -18691,7 +18888,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">f1</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
@@ -18730,7 +18927,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">correct_labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">)</span>
@@ -18771,6 +18968,45 @@ class="
 
 </div>
 
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">specificity</span> <span class="o">=</span> <span class="mi">488</span> <span class="o">/</span> <span class="p">(</span><span class="mi">488</span> <span class="o">+</span> <span class="mi">32</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Specifity: &quot;</span><span class="p">,</span> <span class="n">specificity</span><span class="p">)</span>
+<span class="n">specificities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">specificity</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Specifity:  0.9384615384615385
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -18799,12 +19035,34 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Original&#39;</span><span class="p">,</span> <span class="s1">&#39;Dropout&#39;</span><span class="p">,</span> <span class="s1">&#39;1e-5 Weight Decay&#39;</span><span class="p">,</span> <span class="s1">&#39;1e-4 Weight Decay&#39;</span><span class="p">,</span> <span class="s1">&#39;1e-3 Weight Decay&#39;</span><span class="p">,</span> <span class="s1">&#39;30 Epochs&#39;</span><span class="p">]</span>
+<span class="n">accuracies</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.903921568627451</span><span class="p">,</span> <span class="mf">0.8970588235294118</span><span class="p">,</span> <span class="mf">0.9088235294117647</span><span class="p">,</span> <span class="mf">0.9029411764705882</span><span class="p">,</span> <span class="mf">0.8960784314429084</span><span class="p">,</span> <span class="mf">0.9088235294117647</span><span class="p">]</span>
+<span class="n">precisions</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.9135802469135802</span><span class="p">,</span> <span class="mf">0.9140461215932913</span><span class="p">,</span> <span class="mf">0.917864476386037</span><span class="p">,</span> <span class="mf">0.9368191721132898</span><span class="p">,</span> <span class="mf">0.9053497942386831</span><span class="p">,</span> <span class="mf">0.9320594479830149</span><span class="p">]</span>
+<span class="n">recalls</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.888</span><span class="p">,</span> <span class="mf">0.872</span><span class="p">,</span> <span class="mf">0.894</span><span class="p">,</span>  <span class="mf">0.86</span><span class="p">,</span> <span class="mf">0.88</span><span class="p">,</span> <span class="mf">0.878</span><span class="p">]</span>
+<span class="n">f1_scores</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.9006085192697769</span><span class="p">,</span> <span class="mf">0.8925281473899693</span><span class="p">,</span>  <span class="mf">0.905775075987842</span><span class="p">,</span> <span class="mf">0.8967674661105318</span><span class="p">,</span> <span class="mf">0.8924949290060852</span><span class="p">,</span>  <span class="mf">0.9042224510813595</span><span class="p">]</span>
+<span class="n">validation_losses</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.6381545066833496</span><span class="p">,</span> <span class="mf">1.3870320272445679</span><span class="p">,</span> <span class="mf">0.8494769334793091</span><span class="p">,</span> <span class="mf">0.3553101718425751</span><span class="p">,</span> <span class="mf">0.24578902542591095</span><span class="p">,</span> <span class="mf">0.24506177008152008</span><span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">metrics</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Accuracy&#39;</span><span class="p">:</span> <span class="n">accuracies</span><span class="p">,</span>
                         <span class="s1">&#39;Precision&#39;</span><span class="p">:</span> <span class="n">precisions</span><span class="p">,</span>
-                        <span class="s1">&#39;Recall&#39;</span><span class="p">:</span> <span class="n">recalls</span><span class="p">,</span>
+                        <span class="s1">&#39;Sensitivity/Recall&#39;</span><span class="p">:</span> <span class="n">recalls</span><span class="p">,</span>
+                        <span class="s1">&#39;Specificity&#39;</span><span class="p">:</span> <span class="n">specificities</span><span class="p">,</span>
                         <span class="s1">&#39;F1 Score&#39;</span><span class="p">:</span> <span class="n">f1_scores</span><span class="p">,</span>
                         <span class="s1">&#39;Validation Loss&#39;</span><span class="p">:</span> <span class="n">validation_losses</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="n">model_names</span><span class="p">)</span>
 </pre></div>
@@ -18819,7 +19077,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">metrics</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
@@ -18838,13 +19096,13 @@ class="
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-  <div id="df-9be0dd23-6353-4abd-b511-a0bf529d9ada">
+  <div id="df-99ef94ad-a21a-4908-9fe2-afef9b34113d">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -18866,7 +19124,8 @@ class="
       <th></th>
       <th>Accuracy</th>
       <th>Precision</th>
-      <th>Recall</th>
+      <th>Sensitivity/Recall</th>
+      <th>Specificity</th>
       <th>F1 Score</th>
       <th>Validation Loss</th>
     </tr>
@@ -18877,6 +19136,7 @@ class="
       <td>0.903922</td>
       <td>0.913580</td>
       <td>0.888</td>
+      <td>0.919231</td>
       <td>0.900609</td>
       <td>1.638155</td>
     </tr>
@@ -18885,6 +19145,7 @@ class="
       <td>0.897059</td>
       <td>0.914046</td>
       <td>0.872</td>
+      <td>0.921154</td>
       <td>0.892528</td>
       <td>1.387032</td>
     </tr>
@@ -18893,6 +19154,7 @@ class="
       <td>0.908824</td>
       <td>0.917864</td>
       <td>0.894</td>
+      <td>0.923077</td>
       <td>0.905775</td>
       <td>0.849477</td>
     </tr>
@@ -18901,6 +19163,7 @@ class="
       <td>0.902941</td>
       <td>0.936819</td>
       <td>0.860</td>
+      <td>0.944231</td>
       <td>0.896767</td>
       <td>0.355310</td>
     </tr>
@@ -18909,6 +19172,7 @@ class="
       <td>0.896078</td>
       <td>0.905350</td>
       <td>0.880</td>
+      <td>0.911538</td>
       <td>0.892495</td>
       <td>0.245789</td>
     </tr>
@@ -18917,13 +19181,14 @@ class="
       <td>0.908824</td>
       <td>0.932059</td>
       <td>0.878</td>
+      <td>0.938462</td>
       <td>0.904222</td>
       <td>0.245062</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-9be0dd23-6353-4abd-b511-a0bf529d9ada')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-99ef94ad-a21a-4908-9fe2-afef9b34113d')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -18974,12 +19239,12 @@ class="
 
       <script>
         const buttonEl =
-          document.querySelector('#df-9be0dd23-6353-4abd-b511-a0bf529d9ada button.colab-df-convert');
+          document.querySelector('#df-99ef94ad-a21a-4908-9fe2-afef9b34113d button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-9be0dd23-6353-4abd-b511-a0bf529d9ada');
+          const element = document.querySelector('#df-99ef94ad-a21a-4908-9fe2-afef9b34113d');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -19014,7 +19279,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The convolutional neural networks that have been implemented throughout this project can be compared using this dataframe. As expected, the validation loss decreased as the models are updated to prevent overfitting. The overall results for accuracy, precision, recall, and F1 score are relatively similar across all models. The accuracy and F1 scores remain around 0.90 for each model, while the precision and recall vary from 0.905 to 0.936 and 0.86 to 0.894, respectively.</p>
+<p>The convolutional neural networks that have been implemented throughout this project can be compared using this dataframe. As expected, the validation loss decreased as the models are updated to prevent overfitting. The overall results for accuracy, precision, sensitivity, specificity, and F1 score are relatively similar across all models. The accuracy and F1 scores remain around 0.90 for each model, while the precision, sensitivity, and specificity vary from 0.905 to 0.936, 0.86 to 0.894, and 0.915 to 0.944, respectively. As I had hoped, every model outperforms the specificity of 71.3% achieved by dermatologists, and nearly every model outperforms the sensitivity of 86.6% achieved by dermatologists. Thus, these models would be a valuable tool in improving the diagnosis of melanoma.</p>
 
 </div>
 </div>
