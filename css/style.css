@@ -23,13 +23,13 @@ header {
 .contact-icon img {
   height: 30px;
   width: 30px;
-  margin-right: 5px;
 }
 
 .contact {
   display: flex;
   position: relative;
-  left: 1000px;
+  top: 130px;
+  left: -180px;
 }
 
 .contact-text {
@@ -40,25 +40,24 @@ header {
 
 .email {
   position: relative;
-  top: -15px;
 }
 
 .linkedin {
   position: relative;
-  top: 19px;
-  left: -149px;
+  top: 40px;
+  left: -194px;
 }
 
 .email-text {
   position: relative;
-  top: -6px;
-  left: 5px
+  top: 5px;
+  left: 3px;
 }
 
 .linkedin-text {
   position: relative;
-  top: 22px;
-  left: -147px;
+  top: 36px;
+  left: -190px;
 }
 
 .linkedin-link {
