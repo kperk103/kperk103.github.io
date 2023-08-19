@@ -135,13 +135,88 @@ a {
 }
 
 @media only screen and (min-width: 1500px) {
+  header {
+    background-color: #ffdacc;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header-text {
+    font-family: Serif, Georgia;
+    color: #333;
+    margin: 0;
+    font-size: 2em;
+    transform: scale(1, 1.8);
+    margin-left: 10px;
+  }
+  
+  .contact-icon img {
+    height: 30px;
+    width: 30px;
+  }
+  
   .contact {
     display: flex;
     position: relative;
     top: 130px;
     left: -180px;
   }
-
+  
+  .contact-text {
+    position: relative;
+    font-size: 0.8em;
+    transform: scale(1, 1.3);
+  }
+  
+  .email {
+    position: relative;
+  }
+  
+  .linkedin {
+    position: relative;
+    top: 40px;
+    left: -194px;
+  }
+  
+  .email-text {
+    position: relative;
+    top: 5px;
+    left: 3px;
+  }
+  
+  .linkedin-text {
+    position: relative;
+    top: 38px;
+    left: -190px;
+  }
+  
+  .linkedin-link {
+    color: #333;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Serif, Georgia;
+    background-color: white;
+    color: #333;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
   .image-container {
     padding: 45px 20px;
     margin-left: 60px;
@@ -155,7 +230,44 @@ a {
     border-radius: 50%;
   }
   
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
   #about {
     margin-top: -90px;
+  }
+  
+  h3 {
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    line-height: 1.6;
+  }
+  
+  li {
+    line-height: 1.6;
+  }
+  
+  ul {
+    line-height: 1.6;
+    padding-left: 0;
+    margin-left: 20px;
+  }
+  
+  a {
+    color: #8FBC8F;
+    text-decoration: none;
+  }
+  
+  .change-color {
+    color: #f08080;
+  }
+  
+  .change-color:hover {
+    color: #609f60; 
   }
 }
