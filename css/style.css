@@ -27,9 +27,9 @@ header {
 
 .contact {
   display: flex;
+  justify-content: center;
   position: relative;
-  top: 130px;
-  left: -180px;
+  left: 120px;
 }
 
 .contact-text {
@@ -82,11 +82,11 @@ section {
 
 .image-container {
   padding: 45px 20px;
-  margin-left: 40%;
+  display: flex;
+  justify-content: center;
 }
 
 .profile-picture {
-  float: left;
   width: 150px;
   height: 150px;
   margin-right: 20px;
@@ -99,7 +99,7 @@ section {
 }
 
 #about {
-  margin-top: 160px;
+  margin-top: 60px;
 }
 
 h3 {
@@ -135,12 +135,27 @@ a {
 }
 
 @media only screen and (min-width: 1500px) {
-.image-container {
-  padding: 45px 20px;
-  margin-left: 60px;
-}
+  .contact {
+    display: flex;
+    position: relative;
+    top: 130px;
+    left: -180px;
+  }
 
-#about {
-  margin-top: -90px;
-}
+  .image-container {
+    padding: 45px 20px;
+    margin-left: 60px;
+  }
+
+  .profile-picture {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+
+  #about {
+    margin-top: -90px;
+  }
 }
