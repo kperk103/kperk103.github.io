@@ -65,6 +65,7 @@ header {
   position: relative;
   top: 38px;
   left: -190px;
+  white-space: nowrap;
 }
 
 .github-text {
