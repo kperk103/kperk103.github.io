@@ -30,7 +30,6 @@ header {
   position: relative;
   top: 130px;
   left: -180px;
-  line-height: 20px;
 }
 
 .contact-text {
@@ -87,6 +86,7 @@ section {
 }
 
 .profile-picture {
+  float: left;
   width: 150px;
   height: 150px;
   margin-right: 20px;
