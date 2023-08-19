@@ -29,7 +29,8 @@ header {
   display: flex;
   justify-content: center;
   position: relative;
-  left: 120px;
+  left: 225px;
+  top: 20px;
 }
 
 .contact-text {
@@ -48,6 +49,12 @@ header {
   left: -194px;
 }
 
+.github {
+  position: relative;
+  top: 85px;
+  left: -420px;
+}
+
 .email-text {
   position: relative;
   top: 5px;
@@ -60,7 +67,19 @@ header {
   left: -190px;
 }
 
-.linkedin-link {
+.github-text {
+  position: relative;
+  top: 72px;
+  left: -418px;
+}
+
+.resume-text {
+  position: relative;
+  top: -28px;
+  left: -530px;
+}
+
+.link {
   color: #333;
 }
 
@@ -99,7 +118,7 @@ section {
 }
 
 #about {
-  margin-top: 60px;
+  margin-top: 100px;
 }
 
 h3 {
