@@ -82,7 +82,7 @@ section {
 
 .image-container {
   padding: 45px 20px;
-  margin-left: 60px;
+  margin-left: 40%;
 }
 
 .profile-picture {
@@ -99,7 +99,7 @@ section {
 }
 
 #about {
-  margin-top: -90px;
+  margin-top: 160px;
 }
 
 h3 {
@@ -132,4 +132,15 @@ a {
 
 .change-color:hover {
   color: #609f60; 
+}
+
+@media only screen and (min-width: 1500px) {
+.image-container {
+  padding: 45px 20px;
+  margin-left: 60px;
+}
+
+#about {
+  margin-top: -90px;
+}
 }
