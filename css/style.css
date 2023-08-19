@@ -30,6 +30,7 @@ header {
   position: relative;
   top: 130px;
   left: -180px;
+  line-height: 20px;
 }
 
 .contact-text {
@@ -132,29 +133,4 @@ a {
 
 .change-color:hover {
   color: #609f60; 
-}
-
-@media screen and (max-width: 768px) {
-  .contact {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    top: 0;
-    left: 0;
-  }
-
-  .contact-icon {
-    margin-bottom: 10px;
-  }
-
-  .linkedin {
-    top: 0;
-    left: 0;
-  }
-
-  .email-text,
-  .linkedin-text {
-    top: 0;
-    left: 0;
-  }
 }
