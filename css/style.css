@@ -157,9 +157,9 @@ a {
 @media only screen and (min-width: 1500px) { 
   .contact {
     display: flex;
-    position: relative;
+    justify-content: left;
+    margin-left: -147px;
     top: 20px;
-    left: -370px;
   }
   
   .image-container {
